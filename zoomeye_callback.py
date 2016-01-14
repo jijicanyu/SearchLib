@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # coding:utf-8
-__author__ = 'Joker'
+__author__ = 'tdifg'
 __version__ = 1.0
 
 #                            _ooOoo_  
@@ -37,8 +37,10 @@ __version__ = 1.0
 from common import getpagewithchrome,remove_control_characters
 from lxml import etree
 
+CHROME_DRIVER_PATH = r"/Users/tdifg/code/chromedriver"
+
 def __getUrlsInPage(url,url_xpath,next_xpath):
-    page = getpagewithchrome(url)
+    page = getpagewithchrome(url,CHROME_DRIVER_PATH)
     page = remove_control_characters(page)
 
     html = etree.HTML(page)

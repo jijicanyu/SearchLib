@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # coding:utf-8
-__author__ = 'Joker'
+__author__ = 'sunrain'
 __version__ = 1.0
 
 #                            _ooOoo_  

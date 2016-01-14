@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # coding:utf-8
-__author__ = 'Sunrain'
+__author__ = 'sunrain'
 __version__ = 1.0
 
 #                            _ooOoo_  
@@ -45,7 +45,6 @@ from lxml import etree
 import requests
 
 from common import remove_control_characters
-import json
 
 class Search(object):
     def __init__(self,keyword,searchPages=30):
@@ -173,10 +172,5 @@ class Search(object):
         self.finalUrls = list(set(self.finalUrls))
 
         return self.finalUrls
-
-if __name__ == "__main__":
-
-    a = Search("mongo",5)
-    b = a.searching(usingEngineNames=["zoomeye"])
 
 

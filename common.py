@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # coding:utf-8
-__author__ = 'Joker'
+__author__ = 'sunrain'
 __version__ = 1.0
 
 #                            _ooOoo_  
@@ -51,8 +51,8 @@ def remove_control_characters(html):
     html = re.sub(ur"[\x00-\x08\x0b\x0e-\x1f\x7f]", "", html)
     return html
 
-def getpagewithchrome(url,sleep=3):
-    dr = webdriver.Chrome(executable_path=r"/Users/sunrain/code/chromedriver")
+def getpagewithchrome(url,path,sleep=3):
+    dr = webdriver.Chrome(executable_path=path)
     dr.get(url)
     time.sleep(sleep)
     source = dr.page_source
@@ -60,7 +60,7 @@ def getpagewithchrome(url,sleep=3):
     return source
 
 def getpagewithjs(url,sleep=2):
-    dr = webdriver.PhantomJS(executable_path=r"D:\phantomjs\bin\phantomjs.exe")
+    dr = webdriver.PhantomJS(executable_path=r"xxxx")
     dr.get(url)
     time.sleep(sleep)
     source = dr.page_source

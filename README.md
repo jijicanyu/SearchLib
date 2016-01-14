@@ -1,9 +1,10 @@
 # search
 ###简介
 一个用于爬行所有搜索引擎的库
-
-![效果图1](http://7xktnl.com1.z0.glb.clouddn.com/zoomeeye抓取.png)
-![效果图2](http://7xktnl.com1.z0.glb.clouddn.com/百度搜索结果.png)
+搜索效果图：
+![效果图1](http://7xktnl.com1.z0.glb.clouddn.com/Snip20160114_1.png)
+可以搜索zoomeye结果，10页内，需安装selenium库，并设置zoomeye_callback.py中的chromedriver地址：
+![效果图2](http://7xktnl.com1.z0.glb.clouddn.com/Snip20160114_2.png)
 
 ###优点
 1. 支持面广，可拓展
@@ -15,17 +16,21 @@
 
 ###如何安装
     
-    pip install SearchLib
+    git clone https://github.com/tdifg/SearchLib.git
+    cd SearchLib
+    pip install -r requirements.txt
 
 
 ###如何使用
-修改search.cfg文件6行和7行的路径到你自己的驱动路径（如果不修改，无法查询进行了js跳转的搜索引擎）
-导入本库中的Search类，指定查询字符串，查询页数，搜索引擎名称
+
 详见demo
+如欲加入新搜索引擎支持，可以参照search.cfg其他设置，并酌情增加callback
 
 ###TODO
 1. 重构
 2. 修改page倒序显示的小问题       √
 3. 修复导入时的依赖问题           √
 4. 写两个Demo                  √
-5. 发布到pypi                  √
+5. 发布到pypi                  
+
+
